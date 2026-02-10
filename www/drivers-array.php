@@ -3,6 +3,14 @@
 $drivers = [
     [
         'position' => 1,
+        'name' => 'Don Diouami',
+        'team' => 'Red Bull',
+        'points' => 8694,
+        'wins' => 9674,
+        'image' => 'https://images-ext-1.discordapp.net/external/lyOEHUS7b2sgG6SB_K5iWX4D5LxhZoT5Am9gpJSc1y0/%3Fsize%3D256/https/cdn.discordapp.com/avatars/217098004182728705/a_897f97a7aae37db1fb20d89d80c38433.gif?width=346&height=346',
+    ],
+    [
+        'position' => 2,
         'name' => 'Max Verstappen',
         'team' => 'Red Bull',
         'points' => 136,
@@ -10,7 +18,7 @@ $drivers = [
         'image' => 'http://static.photos/people/200x200/10',
     ],
     [
-        'position' => 2,
+        'position' => 3,
         'name' => 'Sergio Perez',
         'team' => 'Red Bull',
         'points' => 101,
@@ -18,7 +26,7 @@ $drivers = [
         'image' => 'http://static.photos/people/200x200/11',
     ],
     [
-        'position' => 3,
+        'position' => 4,
         'name' => 'Charles Leclerc',
         'team' => 'Ferrari',
         'points' => 98,
@@ -26,7 +34,7 @@ $drivers = [
         'image' => 'http://static.photos/people/200x200/12',
     ],
     [
-        'position' => 4,
+        'position' => 5,
         'name' => 'Carlos Sainz',
         'team' => 'Ferrari',
         'points' => 83,
@@ -34,7 +42,7 @@ $drivers = [
         'image' => 'http://static.photos/people/200x200/13',
     ],
     [
-        'position' => 5,
+        'position' => 6,
         'name' => 'Lando Norris',
         'team' => 'McLaren',
         'points' => 76,
@@ -43,7 +51,7 @@ $drivers = [
     ],
     
     [
-        'position' => 6,
+        'position' => 7,
         'name' => 'Oscar Piastri',
         'team' => 'McLaren',
         'points' => 41,
@@ -51,7 +59,7 @@ $drivers = [
         'image' => 'http://static.photos/people/200x200/15',
     ],
     [
-        'position' => 7,
+        'position' => 8,
         'name' => 'George Russell',
         'team' => 'Mercedes',
         'points' => 37,
@@ -59,7 +67,7 @@ $drivers = [
         'image' => 'http://static.photos/people/200x200/16',
     ],
     [
-        'position' => 8,
+        'position' => 9,
         'name' => 'Lewis Hamilton',
         'team' => 'Mercedes',
         'points' => 27,
@@ -67,7 +75,7 @@ $drivers = [
         'image' => 'http://static.photos/people/200x200/17',
     ],
     [
-        'position' => 9,
+        'position' => 10,
         'name' => 'Fernando Alonso',
         'team' => 'Aston Martin',
         'points' => 27,
@@ -75,7 +83,7 @@ $drivers = [
         'image' => 'http://static.photos/people/200x200/18',
     ],
     [
-        'position' => 10,
+        'position' => 11,
         'name' => 'Yuki Tsunoda',
         'team' => 'RB',
         'points' => 19,
@@ -83,7 +91,7 @@ $drivers = [
         'image' => 'http://static.photos/people/200x200/19',
     ],
     [
-        'position' => 11,
+        'position' => 12,
         'name' => 'Lance Stroll',
         'team' => 'Aston Martin',
         'points' => 9,
@@ -91,7 +99,7 @@ $drivers = [
         'image' => 'http://static.photos/people/200x200/20',
     ],
     [
-        'position' => 12,
+        'position' => 13,
         'name' => 'Nico Hulkenberg',
         'team' => 'Haas',
         'points' => 6,
@@ -99,7 +107,7 @@ $drivers = [
         'image' => 'http://static.photos/people/200x200/21',
     ],
     [
-        'position' => 13,
+        'position' => 14,
         'name' => 'Oliver Bearman',
         'team' => 'Ferrari',
         'points' => 6,
@@ -107,7 +115,7 @@ $drivers = [
         'image' => 'http://static.photos/people/200x200/22',
     ],
     [
-        'position' => 14,
+        'position' => 15,
         'name' => 'Kevin Magnussen',
         'team' => 'Haas',
         'points' => 1,
@@ -115,7 +123,7 @@ $drivers = [
         'image' => 'http://static.photos/people/200x200/23',
     ],
     [
-        'position' => 15,
+        'position' => 16,
         'name' => 'Daniel Ricciardo',
         'team' => 'RB',
         'points' => 1,
@@ -123,7 +131,7 @@ $drivers = [
         'image' => 'http://static.photos/people/200x200/24',
     ],
     [
-        'position' => 16,
+        'position' => 17,
         'name' => 'Esteban Ocon',
         'team' => 'Alpine',
         'points' => 1,
@@ -131,7 +139,7 @@ $drivers = [
         'image' => 'http://static.photos/people/200x200/25',
     ],
     [
-        'position' => 17,
+        'position' => 18,
         'name' => 'Pierre Gasly',
         'team' => 'Alpine',
         'points' => 0,
@@ -139,7 +147,7 @@ $drivers = [
         'image' => 'http://static.photos/people/200x200/26',
     ],
     [
-        'position' => 18,
+        'position' => 19,
         'name' => 'Zhou Guanyu',
         'team' => 'Kick Sauber',
         'points' => 0,
@@ -147,7 +155,7 @@ $drivers = [
         'image' => 'http://static.photos/people/200x200/27',
     ],
     [
-        'position' => 19,
+        'position' => 20,
         'name' => 'Valtteri Bottas',
         'team' => 'Kick Sauber',
         'points' => 0,
@@ -155,7 +163,7 @@ $drivers = [
         'image' => 'http://static.photos/people/200x200/28',
     ],
     [
-        'position' => 20,
+        'position' => 21,
         'name' => 'Alex Albon',
         'team' => 'Williams',
         'points' => 0,
@@ -163,7 +171,7 @@ $drivers = [
         'image' => 'http://static.photos/people/200x200/29',
     ],
     [
-        'position' => 21,
+        'position' => 22,
         'name' => 'Logan Sargeant',
         'team' => 'Williams',
         'points' => 0,
@@ -171,7 +179,7 @@ $drivers = [
         'image' => 'http://static.photos/people/200x200/30',
     ],
     [
-        'position' => 22,
+        'position' => 24,
         'name' => 'Jack Doohan',
         'team' => 'Alpine',
         'points' => 0,
@@ -179,7 +187,7 @@ $drivers = [
         'image' => 'http://static.photos/people/200x200/31',
     ],
     [
-        'position' => 23,
+        'position' => 25,
         'name' => 'Felipe Drugovich',
         'team' => 'Aston Martin',
         'points' => 0,
@@ -187,7 +195,7 @@ $drivers = [
         'image' => 'http://static.photos/people/200x200/32',
     ],
     [
-        'position' => 24,
+        'position' => 26,
         'name' => 'Theo Pourchaire',
         'team' => 'Kick Sauber',
         'points' => 0,
@@ -195,7 +203,7 @@ $drivers = [
         'image' => 'http://static.photos/people/200x200/33',
     ],
     [
-        'position' => 25,
+        'position' => 27,
         'name' => 'Patricio O’Ward',
         'team' => 'McLaren',
         'points' => 0,
