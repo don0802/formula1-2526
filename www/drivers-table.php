@@ -36,7 +36,7 @@
                                     <th class="py-4 px-6">Birth Date</th>
                                     <th class="py-4 px-6">Nationality</th>
                                     <th class="py-4 px-6">Link</th>
-
+                                    <th class="py-4 px-6">Profile</th>
                                 </tr>
                                 <!-- <tr class="bg-gray-700 text-left">
                                     <th class="py-4 px-6">Position</th>
@@ -69,8 +69,12 @@
                                             <?php echo $driver['nationality'] ?>
                                         </td>
                                         <td class="py-4 px-6 font-bold">
-                                            <a href="https://en.wikipedia.org/wiki/<?php echo $driver['forename'] . '_' . $driver['surname'] ?>" class="text-blue-500 hover:underline" target="_blank">Wikipedia</a>
+                                            <a href="https://en.wikipedia.org/wiki/<?php echo $driver['forename'] . '_' . $driver['surname'] ?>"
+                                                class="text-blue-500 hover:underline" target="_blank">Wikipedia</a>
                                         </td>
+
+                                        <td><a href="driver-profile.php?id=<?php echo $driver['driverId'] ?>"
+                                                class="text-blue-500 hover:underline">View Profile</a></td>
                                     </tr>
                                 <?php endforeach; ?>
                             </tbody>
