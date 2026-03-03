@@ -28,31 +28,31 @@ $drivers = mysqli_fetch_all($result, MYSQLI_ASSOC);
         <div class="space-y-8">
             <?php foreach ($drivers as $driver): ?>
             <div class="bg-gray-800 rounded-lg p-8 shadow-2xl">
-                <h2 class="text-2xl font-bold mb-6 text-white"><?php echo htmlspecialchars($driver['forename'] . ' ' . $driver['surname']); ?></h2>
+                <h2 class="text-2xl font-bold mb-6 text-white"><?php echo $driver['forename'] . ' ' . $driver['surname']; ?></h2>
                 
                 <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
                     <div class="bg-gray-700 p-4 rounded">
                         <p class="text-gray-400 text-xs uppercase">Driver ID</p>
-                        <p class="text-white font-semibold text-lg"><?php echo htmlspecialchars($driver['driverId']); ?></p>
+                        <p class="text-white font-semibold text-lg"><?php echo $driver['driverId']; ?></p>
                     </div>
                     <div class="bg-gray-700 p-4 rounded">
                         <p class="text-gray-400 text-xs uppercase">Reference</p>
-                        <p class="text-white font-semibold text-lg"><?php echo htmlspecialchars($driver['driverRef']); ?></p>
+                        <p class="text-white font-semibold text-lg"><?php echo $driver['driverRef']; ?></p>
                     </div>
                     <div class="bg-gray-700 p-4 rounded">
                         <p class="text-gray-400 text-xs uppercase">Code</p>
-                        <p class="text-white font-semibold text-lg"><?php echo htmlspecialchars($driver['code']); ?></p>
+                        <p class="text-white font-semibold text-lg"><?php echo $driver['code']; ?></p>
                     </div>
                     <div class="bg-gray-700 p-4 rounded">
                         <p class="text-gray-400 text-xs uppercase">Nationality</p>
-                        <p class="text-white font-semibold text-lg"><?php echo htmlspecialchars($driver['nationality']); ?></p>
+                        <p class="text-white font-semibold text-lg"><?php echo $driver['nationality']; ?></p>
                     </div>
                     <div class="bg-gray-700 p-4 rounded">
                         <p class="text-gray-400 text-xs uppercase">DOB</p>
-                        <p class="text-white font-semibold text-lg"><?php echo htmlspecialchars($driver['dob']); ?></p>
+                        <p class="text-white font-semibold text-lg"><?php echo $driver['dob']; ?></p>
                     </div>
                 </div>
-                <a href="<?php echo htmlspecialchars($driver['url']); ?>" target="_blank" class="inline-block bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded font-semibold transition mt-2">Visit Profile</a>
+                <a href="<?php echo $driver['url']; ?>" target="_blank" class="inline-block bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded font-semibold transition mt-2">Visit Profile</a>
             </div>
             <?php endforeach; ?>
         </div>
