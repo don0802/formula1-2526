@@ -1,4 +1,17 @@
-<?php require 'database.php'; ?>
+<?php
+include 'database.php';
+
+if (isset($_GET['filter'])) {
+    $filter = $_GET['filter'];
+    $value = $_GET['value'];
+    $query = "SELECT * FROM drivers WHERE $filter = '$value'";
+} else {
+    $query = "SELECT * FROM drivers";
+
+}
+$result = mysqli_query($conn, $query);
+$drivers = mysqli_fetch_all($result, MYSQLI_ASSOC);
+?>
 <?php //include 'drivers-array.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,6 +38,16 @@
     <section class="py-20 bg-gray-900">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center" data-aos="fade-up">Formula 1 Drivers</h2>
+            
+            <!-- Filters Section -->
+            <div class="max-w-4xl mx-auto mb-8 bg-gray-800 rounded-xl p-6 shadow-xl" data-aos="fade-up">
+                <h3 class="text-xl font-bold mb-4 text-red-500">Filter by Nationality</h3>
+                <div class="flex flex-wrap gap-3">
+                    <a href="drivers-table.php" class="px-4 py-2 bg-gray-700 hover:bg-red-600 rounded-lg font-semibold transition duration-200">All Drivers</a>
+                    <a href="drivers-table.php?filter=nationality&value=Dutch" class="px-4 py-2 bg-gray-700 hover:bg-red-600 rounded-lg font-semibold transition duration-200">Dutch</a>
+                </div>
+            </div>
+            
             <div class="max-w-4xl mx-auto">
                 <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl" data-aos="fade-up">
                     <div class="overflow-x-auto">
@@ -37,6 +60,7 @@
                                     <th class="py-4 px-6">Nationality</th>
                                     <th class="py-4 px-6">Link</th>
                                     <th class="py-4 px-6">Profile</th>
+
                                 </tr>
                                 <!-- <tr class="bg-gray-700 text-left">
                                     <th class="py-4 px-6">Position</th>
@@ -46,8 +70,12 @@
                                     <th class="py-4 px-6">Wins</th>
                                 </tr> -->
                             </thead>
+
+
+
                             <tbody>
                                 <?php foreach ($drivers as $key => $driver): ?>
+
                                     <tr class="border-b border-gray-700 hover:bg-gray-750">
                                         <td class="py-4 px-6 font-bold">
                                             <?php echo $driver['driverId'] ?>
@@ -74,7 +102,7 @@
                                         </td>
 
                                         <td><a href="driver-profile.php?id=<?php echo $driver['driverId'] ?>"
-                                                class="text-blue-500 hover:underline">View Profile</a></td>
+                                                class="text-blue-500 hover:underline font-bold">View Profile</a></td>
                                     </tr>
                                 <?php endforeach; ?>
                             </tbody>

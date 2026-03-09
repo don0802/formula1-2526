@@ -1,9 +1,10 @@
 <?php
 
-require 'database.php';
+include 'database.php';
+include 'api.php';
 
 $driverId = $_GET['id'];
-$query = "SELECT * FROM drivers ORDER BY driverId LIMIT 50";
+$query = "SELECT * FROM drivers WHERE driverId = $driverId";
 $result = mysqli_query($conn, $query);
 $drivers = mysqli_fetch_all($result, MYSQLI_ASSOC);
 ?>
@@ -21,13 +22,18 @@ $drivers = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 <body class="bg-gray-900 text-white">
     <?php include 'nav.php'; ?>
-
     <div class="container mx-auto px-6 py-20">
         <h1 class="text-4xl font-bold mb-12 text-center text-red-500">Driver Profile</h1>
         
         <div class="space-y-8">
             <?php foreach ($drivers as $driver): ?>
+            <?php 
+                $driverData = fetchWikipediaPhoto($driver['forename'] . ' ' . $driver['surname']);
+                $image = isset($driverData['photo_url']) ? $driverData['photo_url'] : '';
+            ?>
             <div class="bg-gray-800 rounded-lg p-8 shadow-2xl">
+                <img src="<?php echo $image; ?>" alt="<?php echo $driver['forename'] . ' ' . $driver['surname']; ?>" class="rounded-lg w-48 h-48 object-cover mb-4">
+                
                 <h2 class="text-2xl font-bold mb-6 text-white"><?php echo $driver['forename'] . ' ' . $driver['surname']; ?></h2>
                 
                 <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
@@ -56,6 +62,7 @@ $drivers = mysqli_fetch_all($result, MYSQLI_ASSOC);
             </div>
             <?php endforeach; ?>
         </div>
+    </div>
     </div>
 </body>
 

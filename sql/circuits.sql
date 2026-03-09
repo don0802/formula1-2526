@@ -1,3 +1,5 @@
+USE `Formula1`;
+
 CREATE TABLE `circuits` (
   `circuitId` int(2) NOT NULL,
   `circuitRef` varchar(14) DEFAULT NULL,

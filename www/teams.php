@@ -1,7 +1,13 @@
-<?php require 'database.php'; ?>
+<?php 
+include 'database.php'; 
 
-<?php
-$query = "SELECT * FROM constructors";
+if (isset($_GET['filter'])) {
+    $filter = $_GET['filter'];
+    $value = $_GET['value'];
+    $query = "SELECT * FROM constructors WHERE $filter = '$value'";
+} else {
+    $query = "SELECT * FROM constructors";
+}
 $result = mysqli_query($conn, $query);
 $teams = mysqli_fetch_all($result, MYSQLI_ASSOC);
 ?>
@@ -20,11 +26,20 @@ $teams = mysqli_fetch_all($result, MYSQLI_ASSOC);
 <body class="bg-gray-900 text-white">
     <?php include 'nav.php'; ?>
 
+
+    
     <div class="container mx-auto px-6 py-20">
         <h1
-            class="text-5xl font-bold mb-4 text-center bg-gradient-to-r from-red-500 to-red-400 bg-clip-text text-transparent">
-            Formula 1 Teams</h1>
+        class="text-5xl font-bold mb-4 text-center bg-gradient-to-r from-red-500 to-red-400 bg-clip-text text-transparent">
+        Formula 1 Teams</h1>
         <p class="text-center text-gray-400 mb-12">Explore all Formula 1 constructor teams</p>
+        <div class="max-w-4xl mx-auto mb-8 bg-gray-800 rounded-xl p-6 shadow-xl" data-aos="fade-up">
+                    <h3 class="text-xl font-bold mb-4 text-red-500">Filter by Nationality</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="teams.php" class="px-4 py-2 bg-gray-700 hover:bg-red-600 rounded-lg font-semibold transition duration-200">All Teams</a>
+                        <a href="teams.php?filter=nationality&value=Dutch" class="px-4 py-2 bg-gray-700 hover:bg-red-600 rounded-lg font-semibold transition duration-200">Dutch</a>
+                    </div>
+                </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <?php foreach ($teams as $team): ?>

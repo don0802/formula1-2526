@@ -1,6 +1,6 @@
 <?php
 
-require 'database.php';
+include 'database.php';
 
 if (isset($_GET['id']) && !empty($_GET['id'])) {
     $constructorId = intval($_GET['id']);
@@ -53,6 +53,11 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
                         <div class="bg-gray-700 rounded-lg p-6">
                             <span class="text-gray-300 text-xs uppercase tracking-wider font-semibold">URL</span>
                             <p class="text-lg mt-2"><a href="<?php echo $constructor['url']; ?>" target="_blank" class="text-red-500 hover:text-red-400">Visit Official Website →</a></p>
+                        </div>
+
+                        <div class="bg-gray-700 rounded-lg p-6">
+                            <span class="text-gray-300 text-xs uppercase tracking-wider font-semibold">Image</span>
+                            <img src="<?php echo $constructor['image']; ?>" alt="<?php echo $constructor['name']; ?>" class="text-lg mt-2">
                         </div>
                     </div>
                 </div>
