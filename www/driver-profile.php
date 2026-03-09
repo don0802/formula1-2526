@@ -3,7 +3,7 @@
 require 'database.php';
 
 $driverId = $_GET['id'];
-$query = "SELECT * FROM drivers ORDER BY driverId LIMIT 100";
+$query = "SELECT * FROM drivers ORDER BY driverId LIMIT 50";
 $result = mysqli_query($conn, $query);
 $drivers = mysqli_fetch_all($result, MYSQLI_ASSOC);
 ?>
