@@ -7,7 +7,6 @@ if (isset($_GET['filter'])) {
     $query = "SELECT * FROM drivers WHERE $filter = '$value'";
 } else {
     $query = "SELECT * FROM drivers";
-
 }
 $result = mysqli_query($conn, $query);
 $drivers = mysqli_fetch_all($result, MYSQLI_ASSOC);
@@ -45,6 +44,7 @@ $drivers = mysqli_fetch_all($result, MYSQLI_ASSOC);
                 <div class="flex flex-wrap gap-3">
                     <a href="drivers-table.php" class="px-4 py-2 bg-gray-700 hover:bg-red-600 rounded-lg font-semibold transition duration-200">All Drivers</a>
                     <a href="drivers-table.php?filter=nationality&value=Dutch" class="px-4 py-2 bg-gray-700 hover:bg-red-600 rounded-lg font-semibold transition duration-200">Dutch</a>
+                    <a href="drivers-table.php?filter=nationality&value=German" class="px-4 py-2 bg-gray-700 hover:bg-red-600 rounded-lg font-semibold transition duration-200">German</a>
                 </div>
             </div>
             
