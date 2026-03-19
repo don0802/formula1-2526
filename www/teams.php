@@ -1,5 +1,6 @@
 <?php 
 include 'database.php'; 
+include 'api.php';
 
 if (isset($_GET['filter'])) {
     $filter = $_GET['filter'];
@@ -25,9 +26,6 @@ $teams = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 <body class="bg-gray-900 text-white">
     <?php include 'nav.php'; ?>
-
-
-    
     <div class="container mx-auto px-6 py-20">
         <h1
         class="text-5xl font-bold mb-4 text-center bg-gradient-to-r from-red-500 to-red-400 bg-clip-text text-transparent">
